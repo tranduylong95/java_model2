@@ -8,6 +8,7 @@ public class ReadNumber {
         System.out.println(weightConversionsToWords(weight,""));
     }
     protected static String weightConversionsToWords(int weight,String Words){
+
         int  integerPart;
         int remainder=0;
         if (weight>999) return Words="out of ability";
