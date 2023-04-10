@@ -5,9 +5,9 @@ public class ReadNumber {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cân nặng: ");
         int weight = scanner.nextInt();
-        System.out.println(weightConversionsToWords(weight,""));
+        System.out.println(ReadNumber.weightConversionsToWords(weight,""));
     }
-    protected static String weightConversionsToWords(int weight,String Words){
+    protected  static String weightConversionsToWords(int weight,String Words){
 
         int  integerPart;
         int remainder=0;
@@ -135,8 +135,10 @@ public class ReadNumber {
                 break;
 
         }
-        if(integerPart<20) return Words;
-        else return  weightConversionsToWords( remainder,Words+" ");
+        if(integerPart<20||remainder==0) return Words;
+        else
+            return  weightConversionsToWords( remainder,Words+" ");
+
 
     }
 }
